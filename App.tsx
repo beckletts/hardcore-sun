@@ -35,15 +35,19 @@ export default function App() {
         // Flatten the data and filter out empty values
         const names = data
           .flat()
-          .filter((name) => name && typeof name === "string");
+
+          .filter(
+            (name: string | null | undefined) =>
+              name && typeof name === "string"
+          );
         setParticipants((prev) => [...prev, ...names]);
       } else if (fileType === "csv") {
         // Handle CSV files
         Papa.parse(content as string, {
           complete: (results) => {
-            const names = results.data
+            const names = results.data // Changed from 'data' to 'results.data'
               .flat()
-              .filter((name) => name && typeof name === "string");
+              .filter((name: any) => name && typeof name === "string");
             setParticipants((prev) => [...prev, ...names]);
           },
         });
