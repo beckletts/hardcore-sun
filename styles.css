@@ -1,0 +1,138 @@
+:root {
+  --pearson-blue: #003057;
+  --pearson-red: #d31245;
+  --pearson-light-gray: #f5f5f5;
+  --pearson-border-gray: #e8e8e8;
+}
+
+.file-upload {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--pearson-light-gray);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--pearson-blue);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-label:hover {
+  background-color: #004880;
+}
+
+.file-help {
+  display: block;
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.App {
+  font-family: "Open Sans", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--pearson-blue);
+}
+
+h1 {
+  color: var(--pearson-blue);
+  border-bottom: 4px solid var(--pearson-red);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.input-section {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  flex-grow: 1;
+  border: 2px solid var(--pearson-border-gray);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--pearson-blue);
+}
+
+button {
+  padding: 12px 24px;
+  cursor: pointer;
+  background-color: var(--pearson-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #004880;
+}
+
+button:disabled {
+  background-color: var(--pearson-border-gray);
+  cursor: not-allowed;
+}
+
+.participants,
+.winners {
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--pearson-light-gray);
+  border-radius: 4px;
+  border: 1px solid var(--pearson-border-gray);
+}
+
+.participants div,
+.winners div {
+  padding: 8px;
+  margin: 4px 0;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid var(--pearson-border-gray);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.controls button:last-child {
+  background-color: white;
+  color: var(--pearson-blue);
+  border: 2px solid var(--pearson-blue);
+}
+
+.controls button:last-child:hover {
+  background-color: var(--pearson-light-gray);
+}
+
+h2 {
+  color: var(--pearson-blue);
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.winners {
+  border-left: 4px solid var(--pearson-red);
+}
+
+.winners div {
+  color: var(--pearson-blue);
+  font-weight: 600;
+}
